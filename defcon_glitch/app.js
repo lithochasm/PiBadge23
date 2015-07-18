@@ -1,9 +1,12 @@
 function Glitcher (image, canvas) {
-    this.interval = 200;
+    this.interval = 100;
     this.intervalId = null;
     this.context = canvas.getContext('2d');
     this.context.drawImage(image, 0, 0);
     this.imageData = this.context.getImageData(0, 0, image.width, image.height);
+    this.context.putImageData(this.imageData, 0, 0);
+    this.repeat = 0;
+    this.onlySometimes = 1;
 }
 
 Glitcher.prototype.drawGlitch = function(imageData) {
@@ -16,7 +19,23 @@ Glitcher.prototype.loop = function() {
     var i = (Math.random() * 10);
     var q = (Math.random() * 50) + 50;
     var params = { amount: a, seed: s, iterations: i, quality: q};
-    glitch(this.imageData, params, this.drawGlitch.bind(this));
+
+    if(this.onlySometimes = 1){
+     if( (Math.random() * 99) > 95){
+ 	this.repeat = 5;
+     }
+
+     if(this.repeat != 0){
+        glitch(this.imageData, params, this.drawGlitch.bind(this));
+        this.repeat--;
+     }
+     else{
+         this.context.putImageData(this.imageData, 0, 0);
+     }
+    }
+    else{
+      glitch(this.imageData, params, this.drawGlitch.bind(this));
+    }
 }
 
 Glitcher.prototype.start = function() {
