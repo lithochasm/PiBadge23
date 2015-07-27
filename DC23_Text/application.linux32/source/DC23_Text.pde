@@ -12,7 +12,7 @@ int esize;
 
 void setup() {
   size(320, 240);
-  
+  smooth(8);
   // Create the font
   //printArray(PFont.list());
   f = createFont("Futura-Medium", 22);
@@ -28,7 +28,17 @@ void draw() {
 }
 
 void drawType(float x) {
+  noStroke();
   
+    if (frameCount % 1 == 0) {
+    fill(0);
+    pushMatrix();
+    translate(160, 120);
+    rotate(radians(frameCount * .2  % 360));
+    rect(0, 0, 200, 6);
+    popMatrix();
+    }
+    stroke(0);
   fill(220);
   ellipse(width/2, height/2, 200, 200);
   line(x, 0, x, 20);
