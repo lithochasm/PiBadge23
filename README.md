@@ -21,7 +21,7 @@ https://learn.adafruit.com/touch-pi-portable-raspberry-pi/cad
 
 Overclock / Speedup Adafruit TFT:
 https://learn.adafruit.com/adafruit-pitft-3-dot-5-touch-screen-for-raspberry-pi/faq
-tl;dr == options fbtft_device name=adafruitrt35 rotate=90 frequency=62000000 fps=30
+tl;dr = edit /boot/config.txt change last line to: dtoverlay=pitft35r,rotate=90,speed=62000000,fps=30
 
 
 Reboot!
