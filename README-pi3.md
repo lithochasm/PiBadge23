@@ -11,8 +11,14 @@ Alternative software: omxplayer + rpi-fbcp
 
 Install steps:
 
-Burn image to SD card. Boot, configure networking if needed. Install mplayer. Copy over our /etc/profile & /etc/initab scripts.
+Burn image to SD card. Boot, configure networking if needed. Install mplayer. Copy over our /etc/profile 
+Autologin: sudo ln -fs /etc/systemd/system/autologin@.service /etc/systemd/system/getty.target.wants/getty@tty1.service`
 Copy the videos and autorun.sh script to /home/pi
+
+Alternate:
+sudo apt-get install omxplayer
+build/install https://github.com/AndrewFromMelbourne/raspi2fb
+modify autorun.sh to use omxplayer instead...
 
 Future goals:
 
