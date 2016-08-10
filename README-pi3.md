@@ -2,12 +2,12 @@
 Code for our Defcon23 Raspberry Pi badge
 
 
-PiBadge Official Screen: Adafruit 3.5" Touchscreen TFT: https://www.adafruit.com/products/2097
+PiBadge Official Screen: Adafruit 3.5" Touchscreen TFT: https://www.adafruit.com/products/2097 - this install is for 2.8"
 
-Image for Adafriuit 3.5 Touchscreen: https://learn.adafruit.com/adafruit-pitft-3-dot-5-touch-screen-for-raspberry-pi/easy-install
+Image for Adafriuit 2.8 Touchscreen: https://learn.adafruit.com/adafruit-pitft-28-inch-resistive-touchscreen-display-raspberry-pi/easy-install
 
 Primary Software for playing videos: mplayer 
-Alternative software: omxplayer + rpi-fbcp
+Alternative software: omxplayer + raspi2fb
 
 Install steps:
 
